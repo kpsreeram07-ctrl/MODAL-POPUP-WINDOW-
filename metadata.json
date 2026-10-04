@@ -1,0 +1,6 @@
+{
+  "name": "Modal / Popup Window",
+  "description": "A clean, modern, and responsive modal popup project built with vanilla HTML5, CSS3, and JavaScript featuring smooth animations, form validation, and Gemini AI Assistant integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

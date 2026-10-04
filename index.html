@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal / Popup Window</title>
+    <meta
+      name="description"
+      content="A clean, modern, and responsive modal popup project built with vanilla HTML5, CSS3, and JavaScript featuring smooth animations, form validation, and Gemini AI Assistant integration."
+    />
+    <meta property="og:title" content="Modal / Popup Window" />
+    <meta
+      property="og:description"
+      content="A clean, modern, and responsive modal popup project built with vanilla HTML5, CSS3, and JavaScript featuring smooth animations, form validation, and Gemini AI Assistant integration."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- External Project Stylesheet (Vanilla CSS) -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Site Header / Navigation Bar -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="brand-wrapper">
+          <div class="brand-icon" aria-hidden="true">
+            <!-- Modal Window SVG Icon -->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <span class="brand-title">Modal / Popup Window</span>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-header-ai" id="headerAiBtn" title="Open Gemini AI Assistant">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+            </svg>
+            <span>Ask AI Assistant</span>
+          </button>
+          <span class="brand-tag">HTML5 &bull; CSS3 &bull; Vanilla JS</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main class="main-content">
+      <!-- Centered Hero Showcase Section with Action Buttons -->
+      <section class="hero-card" aria-labelledby="heroHeading">
+        <span class="hero-pill">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          College Web Dev Showcase &bull; Gemini AI Powered
+        </span>
+
+        <h1 id="heroHeading" class="hero-title">
+          Interactive Modal &amp; Popup Window
+        </h1>
+
+        <p class="hero-subtitle">
+          Explore centered popup dialogs featuring background overlay dimming, scale-and-fade CSS animations,
+          form validation, and an integrated <strong>Gemini AI Assistant</strong> for code explanations and smart drafting.
+        </p>
+
+        <!-- Centered Action Buttons -->
+        <div class="hero-buttons">
+          <button
+            type="button"
+            id="openModalBtn"
+            class="btn-open-modal"
+            aria-haspopup="dialog"
+            aria-controls="modalOverlay"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14L21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+            <span>Open Contact Modal</span>
+          </button>
+
+          <button
+            type="button"
+            id="openAiModalBtn"
+            class="btn-open-ai"
+            aria-haspopup="dialog"
+            aria-controls="aiModalOverlay"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Ask AI Assistant</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Key Features Section -->
+      <section class="features-section" aria-label="Feature List">
+        <article class="feature-box">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h2 class="feature-title">Background Dimming</h2>
+          <p class="feature-desc">
+            A semi-transparent dark backdrop dims page contents and locks body scrolling while modals are open.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h2 class="feature-title">Scale &amp; Fade Animation</h2>
+          <p class="feature-desc">
+            Subtle ease-out scale and fade CSS transitions provide smooth entrance and exit visual effects.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h2 class="feature-title">Form Validation</h2>
+          <p class="feature-desc">
+            Client-side JavaScript validation checks for required fields, lengths, and valid email format.
+          </p>
+        </article>
+
+        <article class="feature-box">
+          <div class="feature-icon-wrapper feature-icon-ai" aria-hidden="true">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+            </svg>
+          </div>
+          <h2 class="feature-title">Gemini AI Assistant</h2>
+          <p class="feature-desc">
+            Equipped with Gemini 3.8 Flash to answer web development questions, explain code, and draft messages.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <p class="footer-text">
+        Modal / Popup Window Project &bull; Built with Semantic HTML5, Vanilla CSS3, JavaScript &amp; Gemini AI &bull; GitHub Pages Ready
+      </p>
+    </footer>
+
+    <!-- Floating Action Button for AI Assistant -->
+    <button type="button" class="fab-ai-btn" id="fabAiBtn" aria-label="Open Gemini AI Assistant" title="Ask Gemini AI">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+      </svg>
+      <span>Ask AI</span>
+    </button>
+
+    <!-- ====================================================================
+         MODAL 1: CONTACT FORM MODAL
+         ==================================================================== -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDesc"
+      aria-hidden="true"
+    >
+      <div class="modal-card">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="modal-header-text">
+            <h2 id="modalTitle" class="modal-title">Get in Touch</h2>
+            <p id="modalDesc" class="modal-description">
+              Please enter your details below to send us a message.
+            </p>
+          </div>
+          <!-- Close (×) Button -->
+          <button
+            type="button"
+            class="modal-close-btn"
+            id="modalCloseBtn"
+            aria-label="Close modal window"
+            title="Close (Esc)"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal Body Content -->
+        <div class="modal-body">
+          <!-- Contact Form with Validation -->
+          <form id="modalContactForm" class="modal-form" novalidate>
+            <!-- Name Input Field -->
+            <div class="form-group" id="groupName">
+              <label for="userName" class="form-label">
+                Full Name <span class="required-star">*</span>
+              </label>
+              <input
+                type="text"
+                id="userName"
+                name="name"
+                class="form-input"
+                placeholder="e.g. Alex Morgan"
+                autocomplete="name"
+                required
+              />
+              <span class="error-msg" id="nameError" role="alert"></span>
+            </div>
+
+            <!-- Email Input Field -->
+            <div class="form-group" id="groupEmail">
+              <label for="userEmail" class="form-label">
+                Email Address <span class="required-star">*</span>
+              </label>
+              <input
+                type="email"
+                id="userEmail"
+                name="email"
+                class="form-input"
+                placeholder="e.g. alex@example.com"
+                autocomplete="email"
+                required
+              />
+              <span class="error-msg" id="emailError" role="alert"></span>
+            </div>
+
+            <!-- Message Textarea with AI Assistant Draft/Polish Toolbar -->
+            <div class="form-group" id="groupMessage">
+              <div class="form-label-row">
+                <label for="userMessage" class="form-label">
+                  Message <span class="required-star">*</span>
+                </label>
+                <!-- AI Smart Draft & Polish Extensions -->
+                <div class="ai-form-tools">
+                  <span id="aiDraftStatus" style="font-size:0.75rem; color:#6d28d9; display:none;">Thinking...</span>
+                  <button type="button" class="btn-ai-tool" id="btnAiDraft" title="Draft message with Gemini AI">
+                    ✨ AI Draft
+                  </button>
+                  <button type="button" class="btn-ai-tool" id="btnAiPolish" title="Polish message with Gemini AI">
+                    🪄 Polish
+                  </button>
+                </div>
+              </div>
+              <textarea
+                id="userMessage"
+                name="message"
+                class="form-textarea"
+                rows="4"
+                placeholder="Write your message here, or click '✨ AI Draft' to generate one..."
+                required
+              ></textarea>
+              <span class="error-msg" id="messageError" role="alert"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span>Submit Message</span>
+            </button>
+          </form>
+
+          <!-- In-Modal Success Feedback State -->
+          <div class="modal-success-state" id="modalSuccessState">
+            <div class="success-icon-badge" aria-hidden="true">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="success-title">Message Received!</h3>
+            <p class="success-desc">
+              Thank you, <strong id="successNameDisplay">there</strong>! Your message has been sent successfully. We will review it shortly.
+            </p>
+            <div class="success-actions">
+              <button type="button" class="btn-reset-form" id="btnResetForm">
+                Send Another
+              </button>
+              <button type="button" class="btn-success-close" id="btnSuccessClose">
+                Close Window
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer with Accessibility Tip -->
+        <div class="modal-footer">
+          <span class="keyboard-hint">
+            Press <kbd class="keyboard-key">ESC</kbd> or click backdrop to close
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         MODAL 2: GEMINI AI ASSISTANT MODAL
+         ==================================================================== -->
+    <div
+      class="modal-overlay"
+      id="aiModalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="aiModalTitle"
+      aria-describedby="aiModalDesc"
+      aria-hidden="true"
+    >
+      <div class="modal-card modal-card-ai">
+        <!-- AI Modal Header -->
+        <div class="modal-header">
+          <div class="modal-header-text">
+            <div class="ai-badge-header">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+              <span>Gemini 3.8 Flash</span>
+            </div>
+            <h2 id="aiModalTitle" class="modal-title">AI Assistant</h2>
+            <p id="aiModalDesc" class="modal-description">
+              Ask anything about modal implementation, HTML/CSS/JS, or request assistance.
+            </p>
+          </div>
+          <!-- Close (×) Button -->
+          <button
+            type="button"
+            class="modal-close-btn"
+            id="aiModalCloseBtn"
+            aria-label="Close AI Assistant"
+            title="Close (Esc)"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- AI Modal Body with Chat & Suggestions -->
+        <div class="modal-body ai-modal-body">
+          <!-- Quick Clickable Prompt Chips -->
+          <div class="ai-quick-prompts" aria-label="Suggested questions">
+            <button type="button" class="ai-chip" data-prompt="How do scale and fade modal animations work in CSS?">
+              💡 Modal Animation
+            </button>
+            <button type="button" class="ai-chip" data-prompt="How does background scroll locking prevent page scrolling?">
+              🔒 Scroll Locking
+            </button>
+            <button type="button" class="ai-chip" data-prompt="How is form validation implemented in vanilla JavaScript?">
+              🛡️ Form Validation
+            </button>
+            <button type="button" class="ai-chip" data-prompt="Explain how ESC key and backdrop clicks dismiss the modal.">
+              ⌨️ Keyboard / Overlay Dismiss
+            </button>
+          </div>
+
+          <!-- Chat Messages Container -->
+          <div class="ai-chat-messages" id="aiChatMessages" role="log" aria-live="polite">
+            <div class="ai-message ai-message-model">
+              <div class="ai-avatar" aria-hidden="true">✨</div>
+              <div class="ai-bubble">
+                <p>
+                  Hello! I'm your <strong>Gemini AI Assistant</strong>. I can explain the mechanics behind this modal window, teach you JavaScript and CSS techniques, or help draft messages. What would you like to know?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typing Indicator -->
+          <div class="ai-typing-indicator" id="aiTypingIndicator" style="display: none;">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <span>Gemini is thinking...</span>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form class="ai-chat-input-bar" id="aiChatForm">
+          <input
+            type="text"
+            id="aiUserInput"
+            class="ai-chat-input"
+            placeholder="Ask Gemini AI a question..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn-ai-send" id="aiSendBtn" aria-label="Send message">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+
+        <!-- AI Modal Footer -->
+        <div class="modal-footer">
+          <span class="keyboard-hint">
+            Press <kbd class="keyboard-key">ESC</kbd> or click outside to dismiss
+          </span>
+          <button type="button" class="ai-chip" id="btnClearAiChat" style="padding: 0.2rem 0.6rem; font-size: 0.72rem;">
+            Clear Chat
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vanilla JavaScript File -->
+    <script src="./script.js"></script>
+  </body>
+</html>
